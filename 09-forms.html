@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h1>Forms in HTML</h1>
+    <!-- <form action="index.html" method="POST" novalidate> -->
+    <form action="index.html" method="POST">
+
+        <label for="fname">First Name</label>
+        <!-- <input type="text" id="fname" name="fname" value="Monu" placeholder="Sonu" required> -->
+        <input type="text" id="fname" name="fname" placeholder="Sonu" required>
+        <br>
+        <label>Last Name</label>
+        <input type="text">
+        <br>
+        <label for="phone">Phone</label>
+        <input type="number" id="phone" name="phone">
+        <br>
+        <label>Bio</label>
+        <input type="textarea">
+        <br>
+        <label>Email</label>
+        <input type="email">
+        <br>
+        <label>Password</label>
+        <input type="password">
+        <br>
+        <label>Date of Birth</label>
+        <input type="date">
+        <br>
+        <label>Gender</label>
+        <div id="gender">
+            <label><input type="radio" value="Female" id="gender" name="gender">Female</label>
+            <label><input type="radio" value="Male" id="gender" name="gender">Male</label>
+        </div>
+        <br>
+        <!-- drop down or combo box  -->
+        <select>
+            <option value="1">Java</option>
+            <option value="2">C#</option>
+            <option value="3">Python</option>
+            <option value="4">C++</option>
+        </select>
+        <br>
+        <input type="submit" value="Send Data 2">
+        <br>
+        <input type="reset">
+        <br>
+        <button>Send Data</button>
+    </form>
+</body>
+
+</html>
