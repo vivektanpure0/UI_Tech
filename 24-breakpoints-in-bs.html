@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <style>
+        .device-type {
+            color: white;
+            font-size: 24px;
+            line-height: 2;
+            text-align: center;
+        }
+
+        .device-type-xs {
+            background-color: maroon;
+        }
+
+        .device-type-sm {
+            background-color: olive;
+        }
+
+        .device-type-md {
+            background-color: lightskyblue;
+            color: black;
+        }
+
+        .device-type-lg {
+            background-color: yellow;
+            color: black;
+        }
+
+        .device-type-xl {
+            background-color: blue;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="device-indicator"></div>
+
+    <div class="container">
+        <h1>Bootstrap Breakpoints</h1>
+        <hr />
+        <p>
+            Boostrap defines 4 breakpoints and classifies devices into 4 based on viewport widths
+        <ul>
+            <li>Extra small device &lt; 576px</li>
+            <li>576px &le; Small device &lt; 768px;</li>
+            <li>768px &le; Medium device &lt; 992px;</li>
+            <li>992px &le; Large device &lt; 1200px</li>
+            <li>1200px &le; Extra Large device</li>
+        </ul>
+        </p>
+        <h3>Example: A .container gets different widths for different viewport widths</h3>
+    </div>
+
+    <!-- Width changes at breakpoints -->
+    <div class="container">
+        <strong>.container</strong>
+        <h3>Container (fixed width for given device type)</h3>
+        Elit ex aute nostrud irure. Quis labore dolore commodo ullamco do magna adipisicing dolore incididunt non
+        commodo ea reprehenderit. Sunt consectetur sint non amet.
+        Eiusmod cupidatat nisi deserunt amet fugiat. Amet amet anim esse minim aliqua dolor. Nulla magna excepteur nulla
+        reprehenderit. Et Lorem ex labore tempor dolore adipisicing irure id. Nisi id dolor enim sint occaecat mollit
+        dolor cillum incididunt aliquip nostrud reprehenderit. Commodo est eu fugiat occaecat commodo ipsum magna.
+        Irure incididunt pariatur pariatur ad fugiat voluptate. Reprehenderit do labore ullamco nulla do pariatur est
+        excepteur consequat proident. Cupidatat irure mollit voluptate ex sint aute tempor anim.
+    </div>
+
+    <script>
+        // Source: https://stackoverflow.com/questions/18546067/why-is-the-window-width-smaller-than-the-viewport-width-set-in-media-queries
+        function viewport() {
+            var e = window, a = 'inner';
+            if (!('innerWidth' in window)) {
+                a = 'client';
+                e = document.documentElement || document.body;
+            }
+            return { width: e[a + 'Width'], height: e[a + 'Height'] };
+        }
+
+        function displayDeviceType(event) {
+            var viewportWidth = viewport().width;
+            var viewportHeight = viewport().height;
+
+            var deviceTypeModifierClassName;
+            var deviceType;
+            if (viewportWidth >= 1200) {
+                deviceTypeModifierClassName = 'device-type-xl';
+                deviceType = 'Extra Large (Large Desktop/Smart TV)';
+            } else if (viewportWidth >= 992) {
+                deviceTypeModifierClassName = 'device-type-lg';
+                deviceType = 'Large (Desktop/Tablet)';
+            } else if (viewportWidth >= 768) {
+                deviceTypeModifierClassName = 'device-type-md';
+                deviceType = 'Medium (Tablet)';
+            } else if (viewportWidth >= 576) {
+                deviceTypeModifierClassName = 'device-type-sm';
+                deviceType = 'Small (Phone in landscape orientation)';
+            } else {
+                deviceTypeModifierClassName = 'device-type-xs';
+                deviceType = 'Extra small (Phone in portrait orientation)';
+            }
+
+            document.getElementById('device-indicator').className = 'device-type ' + deviceTypeModifierClassName;
+            document.getElementById('device-indicator').innerHTML = viewportWidth + 'px X ' + viewportHeight + 'px &nbsp;&nbsp;' + deviceType;
+        }
+
+        window.onresize = displayDeviceType;
+        displayDeviceType();
+    </script>
+</body>
+
+</html>
