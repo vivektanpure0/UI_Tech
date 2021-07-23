@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <p class="display-3">Forms in BS</p>
+
+        <form action="index.html" method="POST">
+            <div class="form form-group">
+                <label for="fname">First Name</label>
+                <!-- <input type="text" id="fname" name="fname" value="Monu" placeholder="Sonu" required> -->
+                <input class="form-control" type="text" id="fname" name="fname" placeholder="Sonu" required>
+                <br>
+                <label>Last Name</label>
+                <input class="form-control" type="text">
+                <br>
+                <label for="phone">Phone</label>
+                <input class="form-control" type="number" id="phone" name="phone">
+                <br>
+                <label>Bio</label>
+                <input class="form-control" type="textarea">
+                <br>
+                <label>Email</label>
+                <input class="form-control" type="email">
+                <br>
+                <label>Password</label>
+                <input class="form-control" type="password">
+                <br>
+                <label>Date of Birth</label>
+                <input class="form-control" type="date">
+                <br>
+                <label>Gender</label>
+                <div id="gender">
+                    <label><input class="form-control" type="radio" value="Female" id="gender"
+                            name="gender">Female</label>
+                    <label><input class="form-control" type="radio" value="Male" id="gender" name="gender">Male</label>
+                </div>
+                <br>
+
+                <br>
+                <!-- Submit and reset  -->
+                <input type="submit" value="Send Data 2">
+                <br>
+                <button type="reset" class="btn btn-danger">Send Data</button>
+                <br>
+                <button class="btn btn-success">Send Data</button>
+            </div>
+        </form>
+
+
+
+
+    </div>
+
+</body>
+
+</html>
