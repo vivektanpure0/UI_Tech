@@ -23,6 +23,10 @@ console.log(num1);
 num1 = true;
 console.log(typeof(num1));
 console.log(num1);
+num1 = null;
+console.log(typeof(num1));
+console.log(num1);
+
 
 
 
