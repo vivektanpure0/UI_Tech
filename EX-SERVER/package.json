@@ -1,14 +1,16 @@
 {
   "name": "ex-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "NodeJS express server app demo",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Vaman Deshmukh",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "type": "module"
 }
